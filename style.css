@@ -1,0 +1,33 @@
+html, *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.main{
+    display:flex;
+    max-width: 980px;
+    margin:20px auto;
+    justify-content: center;
+}
+.image-div{
+    border: 1px solid rebeccapurple;
+    width: 20%;
+    padding: 10px;
+    background-color: seashell;
+    box-sizing: border-box;
+}
+.image-div img{
+    width: 100%;
+    overflow: hidden;
+}
+@media (max-width:580px){
+    .main{
+        flex-direction:column;
+    }
+    .image-div{
+        width: 100%;
+    }
+}
