@@ -14,17 +14,17 @@ function ready(callbackFunc) {
         });
     }
 }
-function someEventHandler(event){
-    console.log(event.target);
+function someEventHandler(image){
+    console.log(image);
 }
 function addClickEvent(){
     var images = document.getElementsByClassName('image-element');
     Array.prototype.forEach.call(images, function(el, i){
         if(window.innerWidth > 830){
-            el.addEventListener('click',someEventHandler);
+            el.addEventListener('click',someEventHandler.bind(el.src),false);
             //el.onclick = function (){someEventHandler(el.src)};
         }else{
-            el.removeEventListener('click',someEventHandler);
+            el.removeEventListener('click',someEventHandler.bind(el.src),false);
             //el.onclick = function(){return false};
         }
     });
