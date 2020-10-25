@@ -21,11 +21,9 @@ function addClickEvent(){
     var images = document.getElementsByClassName('image-element');
     Array.prototype.forEach.call(images, function(el, i){
         if(window.innerWidth > 830){
-            el.addEventListener('click',someEventHandler.bind(el.src),false);
-            //el.onclick = function (){someEventHandler(el.src)};
+            el.addEventListener('click',someEventHandler.bind(el.src),false);            
         }else{
-            el.removeEventListener('click',someEventHandler.bind(el.src),false);
-            //el.onclick = function(){return false};
+            el.removeEventListener('click',someEventHandler.bind(el.src),false);            
         }
     });
 }
